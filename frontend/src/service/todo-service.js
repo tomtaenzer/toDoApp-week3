@@ -5,7 +5,9 @@ export const getTodos = async () => {
 };
 
 export const addTodo = async (description) => {
-    return await axios.put('/api/todo', {description});
+    return await axios.put('/api/todo', {
+        description: description
+    });
 };
 
 export const deleteTodo = async (id) => {
@@ -13,6 +15,8 @@ export const deleteTodo = async (id) => {
 };
 
 export const setTodoStatus = async (id, status) => {
-    return await axios.put(`/api/todo/${id}/status`, {status});
+    return await axios.put(`/api/todo/${id}/status`, {
+        status: status
+    });
 };
 
